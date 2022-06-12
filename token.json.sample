@@ -1,0 +1,5 @@
+{
+    "access": "YOUR_PIXIV_ACCESS_TOKEN_HERE",
+    "refresh": "YOUR_PIXIV_REFRESH_TOKEN_HERE",
+    "sessid": "YOUR_PIXIV_PHPSESSID_HERE"
+}
