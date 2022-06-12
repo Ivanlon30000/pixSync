@@ -44,3 +44,6 @@ For periodic synchronization, please use `crontab` or something
 + [ ] Download and transcoding ugoira
 + [ ] Integrate `get-pixivpy-token`
 + [ ] Get `PHPSESSID` automatically by `selenium`
+
+## LICENCE
+[WTFPL](https://github.com/Ivanlon30000/pixSync/blob/main/LICENCE.txt)
