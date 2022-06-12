@@ -4,5 +4,5 @@ max_retry: 3
 restrict:
   - "public"
   - "private"
-save_path: "./tmp/download"
+save_path: "./download"
 # extra_request_params:
