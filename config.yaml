@@ -1,0 +1,8 @@
+# pixSync config file
+
+max_retry: 3
+restrict:
+  - "public"
+  - "private"
+save_path: "./tmp/download"
+# extra_request_params:
