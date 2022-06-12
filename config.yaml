@@ -4,5 +4,6 @@ max_retry: 3
 restrict:
   - "public"
   - "private"
-save_path: "./download"
+savepath: "./download"
+metapath: "bookmark.json"
 # extra_request_params:
