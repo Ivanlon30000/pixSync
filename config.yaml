@@ -5,5 +5,5 @@ restrict:
   - "public"
   - "private"
 savepath: "./download"
-metapath: "bookmark.json"
+dbpath: "db.json"
 # extra_request_params:
