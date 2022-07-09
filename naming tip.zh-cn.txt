@@ -1,0 +1,28 @@
+可以使用 '/' 建立文件夹。示例： {user}/{id}
+为了防止文件名重复，命名规则里一定要包含 {id} 或者 {id_num}{p_num}。
+您可以使用多个标记；建议在不同标记之间添加分割用的字符。示例：{id}-{user_id}
+* 在某些情况下，会有一些标记不可用。
+{id} 默认文件名，如 44920385_p0
+{user} 用户名字
+{user_id} 用户 ID
+{title} 作品标题
+{p_title} 当前页面的标题
+{tags} 作品的标签列表
+{tags_translate} 作品的标签列表，附带翻译后的标签（如果有）
+{tags_transl_only} 翻译后的标签列表
+{p_tag} 当前页面的标签。当前页面没有标签时不可用。
+{type} 作品类型，分为：Illustration, Manga, Ugoira, Novel
+{like} Like count，作品的点赞数。
+{bmk} Bookmark count，作品的收藏数。把它放在最前面可以让文件按收藏数排序。
+{bmk_id} Bookmark Id。你收藏的每一个作品都会有一个 Bookmark Id。收藏的时间越晚，Bookmark Id 就越大。当你下载你的收藏时，可以使用 {bmk_id} 作为排序依据。
+{bmk_1000} 作品收藏数的简化显示。例如：0+、1000+、2000+、3000+ ……
+{view} View count，作品的浏览量。
+{rank} 作品在排行榜中的排名。如 #1、#2 …… 只能在排行榜页面中使用。
+{date} 作品的创建时间。如 2019-08-29
+{task_date} 本次任务抓取完成时的时间。例如：2020-10-21
+{px} 宽度和高度
+{series_title} 系列标题（可能为空）
+{series_order} 作品在系列中的序号，如 #1 #2
+{series_id} 系列 ID
+{id_num} 数字 id，如 44920385
+{p_num} 图片在作品内的序号，如 0、1、2 …… 每个作品都会重新计数。

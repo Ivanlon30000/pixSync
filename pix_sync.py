@@ -20,8 +20,10 @@ class PixBookmarkSync:
     def __init__(self, tokens: Dict[str, str], cfg: Dict[str, str], logger: logging.Logger = None) -> None:
         self.cfg = cfg
         self.logger = logger if logger is not None else logging.getLogger()
-
-        self.api = pixiv.AppPixivAPI(proxies=None, cookies={
+        proxies = cfg.get('proxies', None)
+        if proxies is not None:
+            self.logger.info("Detect proxies: %s" % proxies)
+        self.api = pixiv.AppPixivAPI(proxies=proxies, cookies={
             "PHPSESSID": tokens["sessid"]
         })
         
@@ -66,8 +68,8 @@ class PixBookmarkSync:
             try:
                 if illust["type"] in {"illust", "manga"}:
                     if illust["page_count"] == 1:
-                        self.api.download(illust["meta_single_page"]
-                                          ["original_image_url"], path=save_dir)
+                        self.api.download(illust["meta_single_page"]["original_image_url"], 
+                                          path=save_dir)
                     else:
                         for url in illust["meta_pages"]:
                             url = url["image_urls"]["original"]
@@ -102,11 +104,13 @@ class PixBookmarkSync:
                     time.sleep(0.5)
                 else:
                     break
-
+        self.logger.info(f"you now have {len(illusts)} bookmarked illusts.")
+        
         downloaded_illusts = self.get_downloaded_illusts()
         new_illusts = [illust for illust in illusts if int(illust["id"]) not in downloaded_illusts]
-        self.logger.info(f"{len(new_illusts)} new illusts")
-
+        self.logger.info(f"where there are {len(new_illusts)} new illusts")
+        
+        self.logger.info("start downloading")
         os.makedirs(self.cfg["savepath"], exist_ok=True)
         result = self.download(new_illusts, self.cfg["savepath"])
         self.logger.info(f"finish: {len(result['success'])} success, {len(result['fail'])} fail:")

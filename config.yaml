@@ -6,4 +6,11 @@ restrict:
   - "private"
 savepath: "./download"
 dbpath: "db.json"
-# extra_request_params:
+
+naming_rule: "{id}_{title}" # default "{id}"
+
+# extra_request_params
+
+# proxies:
+#   http: "http://127.0.0.1:7890"
+#   https: "http://127.0.0.1:7890"

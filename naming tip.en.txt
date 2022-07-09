@@ -1,0 +1,28 @@
+You can create a directory with '/'. Example： {user}/{id}
+To prevent duplicate file names, {id} or {id_num}{p_num} must be included in the naming rules.
+You can use multiple tags, and you can add a separate character between different tags. Example: {id}-{user_id}
+* In some cases, some tags will not be available.
+{id} Default file name, for example 44920385_p0
+{user} User name
+{user_id} User ID
+{title} Works title
+{p_title} The title of this page
+{tags} The tags of the work
+{tags_translate} The tags of the work, with the translated tag (if any)
+{tags_transl_only} Translated tags
+{p_tag} The tag of the current page. Not available if the current page has no tag.
+{type} The type of work, divided into：Illustration, Manga, Ugoira, Novel
+{like} Like count.
+{bmk} Bookmark count, bookmarks number of works.
+{bmk_id} Bookmark Id. Every work in your bookmarks will have a Bookmark Id. The later the bookmark is added, the larger the Bookmark Id. When you download your bookmarks, you can use {bmk_id} as a sorting basis.
+{bmk_1000} Simplified number of bookmark, e.g. 0+、1000+、2000+、3000+ ……
+{view} View count.
+{rank} The ranking of the work in the ranking pages. Such as #1, #2 ... Can only be used in ranking pages.
+{date} The time the creation of the work. Such as 2019-08-29
+{task_date} The time when the task was crawl completed. For example: 2020-10-21
+{px} Width and height
+{series_title} Series title (may be empty)
+{series_order} The number of the work in the series, such as #1 #2
+{series_id} Series ID
+{id_num} Number id, for example 44920385
+{p_num} The serial number of the picture in the work, such as 0, 1, 2 ... Each work will be recounted.
